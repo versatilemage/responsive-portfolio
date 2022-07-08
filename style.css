@@ -1,0 +1,313 @@
+:root {
+    --clr-one: rgba(0, 0, 255, 0.6);
+    --clr-two: rgb(255, 255, 0);
+    --clr-three: #000000;
+    --clr-four: #ffffff;
+    --clr-five: #ffffff;
+}
+
+body {
+    background: var(--clr-three);
+    box-sizing: border-box;
+    display: grid;
+}
+
+.main-container {
+    width: 960px;
+    margin: 1em auto 0;
+    padding: 1em 1.5em;
+    background: var(--clr-four);
+}
+
+.container{
+    background: var(--clr-two);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 1em 0em;
+    align-items: center;
+}
+
+#logo {
+    width: 59.5%;
+    margin-left: auto;
+}
+
+#hr {
+    color: var(--clr-three);
+    font-weight: 700;
+    font-style: oblique;
+    font-size: 4em;
+    margin-left: 1em;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#right-header {
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+    margin-right: 5em;
+    align-items: flex-end;
+    width: 39.5%;
+}
+
+.btn{
+    border: solid 2px white;
+    background: var(--clr-three);
+    color: var(--clr-five);
+    text-decoration: none;
+    text-align: center;
+    font-weight: 700;
+    font-size: 1.5em;
+    border-radius: 0.3em;
+    padding: 0.2em 0.3em;
+}
+
+#child-contain{
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 1em;
+}
+
+#child-container{
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    gap: 1em;
+}
+
+#lang-heading {
+    background: var(--clr-two);
+    color: var(--clr-three);
+    text-align: left;
+    padding-left: 2em;
+    font-weight: 700;
+    font-size: 2em;
+}
+
+.media-scroller {
+    margin-top: 2em;
+    margin-left: 3em;
+    margin-right: 1em;
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: 50%;
+    height: 23em;
+    gap: 0.5em;
+    align-items: stretch;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    padding-left: 3em;
+}
+
+.media-element {
+    width: 80%;
+    padding: 1em;
+    background: var(--clr-three);
+    color: var(--clr-five);
+    text-align: center;
+    font-size: 1em;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 800;
+    height: 19em;
+}
+
+.media-element > img {
+    inline-size: 100%;
+    aspect-ratio: 18 / 12;
+    object-fit: fill;
+    border-radius: 1em;
+    border: solid 0.05em rgb(0, 0, 0);
+}
+
+#contain-body {
+    display: grid;
+    grid-template-columns: 70% 30%;
+    flex-wrap: wrap;
+    margin-left: 3em;
+    margin-top: 1em;
+    margin-right: 2em;
+}
+
+#left-body {
+    display: flex;
+    flex-direction: column;
+    background: var(--clr-three);
+    text-align: center;
+    padding: 1em 1em;
+    color: var(--clr-five);
+    border-radius: 0.5em;
+}
+
+#left-content p{
+    text-align: justify;
+}
+
+#refer {
+    margin-top: 1em;
+}
+
+#refer > img {
+    inline-size: 75%;
+    aspect-ratio: 14 / 12;
+    object-fit: cover;
+    border: solid 0.1em var(--clr-five);
+    border-radius: 1em 0em 1em 0em;
+}
+
+#right-body {
+    background: var(--clr-three);
+    margin-left: 0.5em;
+    color: var(--clr-five);
+    text-align: center;
+    border-radius: 1em;
+}
+
+#right-content {
+    margin: 0.5em 0.5em;
+    text-align: justify;
+}
+
+#empty-space {
+    height: 5vh;
+}
+
+#footed {
+    background: var(--clr-two);
+    display: flex;
+    flex-direction: column;
+    padding: 1em 0em;
+}
+
+.footer-ref {
+    width: 2em;
+    height: 2em;
+    border-radius: 50%;
+}
+.footer-ref > img {
+    object-fit: contain;
+    height: 2em;
+    width: 2em;
+    border-radius: 50%;
+}
+
+.footer-joinus {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    gap: 1em;
+    margin-left: 1em;
+}
+
+#footer-note {
+    margin-left: 1em;
+    font-weight: 700;
+    font-size: 1.5em;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+}
+
+@media (max-width: 450px) {
+    .container{
+        display: flex;
+        flex-direction: column;
+        padding: 0em 0em 3em;
+    }
+    #logo{
+        width: 100%;
+    }
+    #hr{
+        font-size: 7em;
+        font-weight: 900;
+        text-align: center;
+        margin-right: 1em;
+    }
+    #right-header{
+        width: 50%;
+        align-items: center;
+        margin: 0em auto 3em;
+        gap: 1em;
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+    }
+    #child-contain {
+        display: grid;
+        grid-template-columns: auto auto;
+    }
+    #child-container {
+        display: grid;
+        grid-template-columns: auto auto;
+    }
+    .btn {
+        font-size: 2em;
+        font-weight: 700;
+        font-family: Arial, Helvetica, sans-serif;
+        padding: 0.5em 0.7em;
+    }
+}
+
+@media (max-width: 700px) {
+    body{
+        background: white;
+    }
+    .media-scroller {
+        width: 90%;
+        margin: 0 auto;
+        padding-bottom: 4em;
+    }
+    #contain-body {
+        display: flex;
+        flex-direction: column;
+    }
+    #left-body {
+        width: 90%;
+        margin: 1em auto;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+    #right-body {
+        width: 93%;
+        margin: 1em auto;
+    }
+    #left-content {
+        font-size: 3em;
+        text-align: justify;
+        margin: 0.5em 0.5em;
+    }
+    #right-content {
+        font-size: 3em;
+        margin: 0.5em 0.5em;
+    }
+    .body-head {
+        font-size: 4em;
+        text-align: left;
+        margin-left: 0.3em;
+    }
+    #lang-heading {
+        font-size: 4em;
+        font-weight: 700;
+    }
+    .media-element{
+        font-size: 2em;
+        width: 90%;
+    }
+    .media-element > img {
+        inline-size: 90%;
+        aspect-ratio: 16 / 12;
+        object-fit: fill;
+        border-radius: 0.5em;
+        border: solid 0.05em rgb(0, 0, 0);
+    }
+    #refer > img {
+        inline-size: 50%;
+        aspect-ratio: 14 / 12;
+        object-fit: cover;
+        border: solid 0.1em var(--clr-five);
+        border-radius: 1em 0em 1em 0em;
+    }
+    #refer{
+        align-items: center;
+    }
+}
